@@ -6,25 +6,18 @@ public class Merge {
 
 	public static void main(String[] args) {
 
-		int a1[] = new int[6]; // enough space
-		a1[0] = 1;
-		a1[1] = 2;
-		a1[2] = 5;
+		int A[] = new int[6];
+		A[0] = 2;
+		A[1] = 3;
+		A[2] = 4;
+
+		int B[] = { 5, 6, 8 };
 
 		int m = 3;
-
-		int a2[] = { 5, 6, 8 };
-		int n = 3;
-
-		int i = m;
-
-		for (int j = 0; j < n; j++) {
-			a1[i] = a2[j];
-			i++;
+		for (int i = 0; i < B.length; i++) {
+			A[m++] = B[i];
 		}
-
-		Arrays.sort(a1);
-
-		System.out.println(Arrays.toString(a1));
+		Arrays.sort(A);
+		System.out.println(Arrays.toString(A));
 	}
 }
