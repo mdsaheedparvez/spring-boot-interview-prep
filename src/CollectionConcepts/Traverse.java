@@ -1,14 +1,12 @@
 package CollectionConcepts;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
+import java.util.*;
 
 public class Traverse {
 
 	public static void main(String[] args) {
 
-		ArrayList<String> arr = new ArrayList<String>();
+		List<String> arr = new ArrayList<String>();
 		arr.add("abhishek");
 		arr.add("sgivam");
 		arr.add("kiran");
@@ -17,7 +15,7 @@ public class Traverse {
 		//for each
 		for(String hj : arr  ) {
 			System.out.print(hj+"\t"+hj.length()+"\t");
-			StringBuffer sb = new StringBuffer(hj);
+			StringBuilder sb = new StringBuilder(hj);
 			System.out.println(sb.reverse());
 		}
 		
@@ -25,10 +23,9 @@ public class Traverse {
 		System.out.println("---------------------------");
 		//iterator:  -> Forward Traversing
 		
-		Iterator<String> itr = arr.iterator();
-		while(itr.hasNext()) {
-			String next = itr.next();
-			System.out.println(next);
+		Iterator<String> iterator = arr.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}
 		
 		System.out.println("---------------------------");
@@ -36,14 +33,8 @@ public class Traverse {
 		//list Iterator -->backwad traversing (size needs to pass)
 		ListIterator<String> listitr = arr.listIterator(arr.size());
 		
-//		while(listitr.hasNext()) {
-//			String next2 = listitr.next();
-//			System.out.println(next2);
-//		}
-		
 		while(listitr.hasPrevious()) {
-			String next2 = listitr.previous();
-			System.out.println(next2);
+			System.out.println(listitr.previous());
 		}
 		
 		System.out.println("------------------sdfsdf---------");

@@ -16,9 +16,9 @@ public class Comparatr {
 //		System.out.println(arli);
 		
 		List<Employee> arli = new ArrayList<>();
-		arli.add(new Employee("shivam","345353535",45));
-		arli.add(new Employee("kiran","345353535",24));
-		arli.add(new Employee("phuu","3453545654",35));
+		arli.add(new Employee("pinky","345353535",45,500.67D));
+		arli.add(new Employee("bunty","345353535",24,200.67D));
+		arli.add(new Employee("Abhishek","3453545654",35,300.67D));
 		
 //		System.out.println(arli);
 		
@@ -34,6 +34,12 @@ public class Comparatr {
 		Collections.sort(arli1, new NameComparator());
 		System.out.println(arli1);
 		
+//		List<Employee> arli2 = new ArrayList<>(arli);
+//		Collections.sort(arli2,new SalaryCompar());
+//		System.out.println(arli2);
+		
+		arli.sort(Comparator.comparing(Employee::getSalary));
+		System.out.println(arli);
 	}
 
 }

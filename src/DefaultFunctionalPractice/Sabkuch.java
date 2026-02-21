@@ -8,7 +8,7 @@ public class Sabkuch implements A, B {
 
 	@Override
 	public void sayHello() {
-//		B.super.sayHello();
+		B.super.sayHello();
 		System.out.println("hello sabkucj");
 	}
 }

@@ -6,6 +6,7 @@ package compar;
 	private String empName;
 	private String phone;
 	private int empId;
+	private Double  salary;
 	
 //	@Override
 //	public int compareTo(Employee o) {
@@ -13,6 +14,18 @@ package compar;
 //		return this.empId - o.empId;
 //	}
 	
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public Double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 	public String getEmpName() {
 		return empName;
 	}
@@ -32,17 +45,21 @@ package compar;
 	public void setEmpId(int empId) {
 		this.empId = empId;
 	}
-	
-	@Override
-	public String toString() {
-		return "Employee [empName=" + empName + ", phone=" + phone + ", empId=" + empId + "]";
-	}
-	public Employee(String empName, String phone, int empId) {
+
+	public Employee(String empName, String phone, int empId, Double salary) {
 		super();
 		this.empName = empName;
 		this.phone = phone;
 		this.empId = empId;
+		this.salary = salary;
 	}
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", phone=" + phone + ", empId=" + empId + ", salary=" + salary + "]";
+	}
+	
+
+	
 
 	
 

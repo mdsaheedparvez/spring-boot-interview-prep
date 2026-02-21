@@ -6,7 +6,7 @@ public class CollectionsPract {
 	public static void main(String[] args) {
 		
 		//type safe collection
-		ArrayList<String> arr = new ArrayList<String>();
+		List<String> arr = new ArrayList<>();
 		arr.add("abhishek");
 		arr.add("sgivam");
 		arr.add("kiran");
@@ -39,11 +39,11 @@ public class CollectionsPract {
 		
 		
 		//un type
-//		LinkedList li = new LinkedList();
-//        li.add("abhi");
-//        li.add(23);
-//        li.add(3454.54d);
-//        System.out.println(li);
+		LinkedList li = new LinkedList();
+        li.add("abhi");
+        li.add(23);
+        li.add(3454.54d);
+        System.out.println(li);
 		
 		//set
 		
@@ -52,6 +52,7 @@ public class CollectionsPract {
 		gh.add(453.78);
 		gh.add(8589.23);
 		gh.add(8589.23);
+		gh.add(56.947);
 		System.out.println(gh);
 		
 		TreeSet<Double> tr = new TreeSet<>();
