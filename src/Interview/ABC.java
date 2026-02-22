@@ -47,16 +47,21 @@ public class ABC {
 //		maxProfit = Math.max(maxProfit, price - minm);
 //	}
 //	System.out.println(maxProfit);
-		int[] ar = {1,3,2,4,5,5,2,8};
-		Arrays.sort(ar);
-		System.out.println(Arrays.toString(ar));
-		int max = Integer.MIN_VALUE; int min = Integer.MAX_VALUE;
-		for(int pr : ar) {
-			min = Math.min(pr, min);
-			max = Math.max(max, pr - min);
+		int arr[] = {1,3,9,5,6,7,8,3};
+		Arrays.sort(arr);
+		int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+		
+		for(int run : arr) {
+			min = Math.min(run, min);
+			max = Math.max(max,Math.abs(run-min));
 		}
-		System.out.println(min);
-		System.out.println(max);
+		
+		System.out.println("Maximum Profit: "+max);
+		System.out.println("Mimimum Profit: "+min);
+		
+		
+		
+		
 	}
 
 }
