@@ -1,6 +1,6 @@
 package Oops;
 
- abstract public class Abstracttion {
+  public abstract class Abstracttion {
 	
 	public void call () {
 		System.out.println("Hello World");
