@@ -2,13 +2,16 @@ package Java8Features;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Practicejava8Questions {
-
+    
+	
 	public static void main(String[] args) {
 
           List<EmployeeePrac> emplList = Arrays.asList(new EmployeeePrac("Shivam", "92393745984769", 21, 123.23,"HR"),
@@ -58,11 +61,29 @@ public class Practicejava8Questions {
           
           
           //sum of all the number
-          List<Integer> numList =  Arrays.asList(1,4,5,7,4,9,3);
+          List<Integer> numList =  Arrays.asList(1,4,5,7,4,9,3,1,1);
           System.out.println(numList.stream().mapToInt(x->x).sum());
           System.out.println(numList.stream().reduce(0, (x,y)->x+y));
           System.out.println(numList.stream().reduce(Integer::sum).get());
+          System.out.println(numList.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get());
           
+          //Remove duplicate from the list
+          System.out.println(numList.stream().distinct().toList());  
+          
+          //find duplicate elements
+          HashSet set = new HashSet<Integer>();
+          List<Integer> dup = numList.stream().filter(n->!set.add(n)).toList();
+          System.out.println(dup);
+          
+          //unique duplicate
+          HashSet set1 = new HashSet<Integer>();
+          Set<Integer> uniqueDup = numList.stream().filter(n->!set1.add(n)).collect(Collectors.toSet());
+          System.out.println(uniqueDup);
+          
+          //convert list to map  //
+          List<String> namess = Arrays.asList("AhiK","Raj","Parvez","Shiva");
+          //output = {Abhi = 3}
+          System.out.println(namess.stream().collect(Collectors.toMap(names -> names, names->names.length())));
           
           
           
