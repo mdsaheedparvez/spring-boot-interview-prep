@@ -17,6 +17,7 @@ public class Practicejava8Questions {
           List<EmployeeePrac> emplList = Arrays.asList(new EmployeeePrac("Shivam", "92393745984769", 21, 123.23,"HR"),
         		  new EmployeeePrac("Kiran", "92393745984769", 24, 90.23,"Developer"),
         		  new EmployeeePrac("Abhishek", "92393745984769", 31, 877.23, "Painter"),
+        		  new EmployeeePrac("Singh", "92393745984769", 31, 98377.23, "Painter"),
         		  new EmployeeePrac("Aman", "92393745984769", 35, 23994.23,"EngineeringSales"));
           
           //max paid salary
