@@ -85,6 +85,11 @@ public class Practicejava8Questions {
           //output = {Abhi = 3}
           System.out.println(namess.stream().collect(Collectors.toMap(names -> names, names->names.length())));
           
+//          Create Map<Department, Highest Paid Employee Name>
+          Map<String, String> collectMap = emplList.stream().collect(Collectors.groupingBy(EmployeeePrac::getDepartment,
+        		  Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparing(EmployeeePrac::getSalary))
+        				  ,a->a.map(EmployeeePrac::getEmpName).orElseGet(null))));
+          System.out.println(collectMap);
           
           
           
