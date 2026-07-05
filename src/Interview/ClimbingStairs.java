@@ -5,7 +5,7 @@ import java.util.LinkedList;
 //You are climbing a staircase. It takes n steps to reach the top.
 //Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 //  5  1 2 2  2 1 2  2 2 1 
-public class Linkkk {
+/*public class Linkkk {
 
 	public static void main(String[] args) {
 		  int n = 6;
@@ -23,5 +23,34 @@ public class Linkkk {
 		}
 		return prev;
 	}
+	
+	
 
+}*/
+
+
+public class ClimbingStairs {
+
+    public static void main(String[] args) {
+        int n = 6;
+        System.out.println(climbStairs(n));
+    }
+
+    public static int climbStairs(int n) {
+
+        if (n <= 1) {
+            return 1;
+        }
+
+        int first = 1;
+        int second = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int current = first + second;
+            second = first;
+            first = current;
+        }
+
+        return first;
+    }
 }
