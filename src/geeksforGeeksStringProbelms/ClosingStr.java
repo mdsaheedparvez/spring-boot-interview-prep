@@ -10,7 +10,7 @@ public class ClosingStr {
 
 	}
 
-	public static int countCht(String str) {
+	private static int countCht(String str) {
 //		int rsult = 0;
 //		for (int i = 0; i < str.length(); i++) {
 //			if (str.charAt(i) == 'K') {
