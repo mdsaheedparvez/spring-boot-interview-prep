@@ -9,7 +9,7 @@ import java.util.List;
 //You want to maximize your profit by choosing a single day to buy one fruit and choosing a different day in the future to sell that fruit. Assuming fruits will never get rotten.
 //Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
-public class ABC {
+public class ABC_Interview {
 
 	public static void main(String[] args) {
 	
