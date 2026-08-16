@@ -37,7 +37,7 @@ public class BuySell {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		BuySell buySell = new BuySell();
-		int[] prices = {7,1,5,3,6,4};
+		int[] prices = {7,1,5,3,9,4};
 		int max = BuySell.calculateMaxProf(prices);
 		System.out.println(max);
 
