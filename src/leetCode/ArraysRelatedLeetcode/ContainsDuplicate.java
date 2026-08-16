@@ -49,7 +49,7 @@ Constraints:
 public class ContainsDuplicate {
 
 	public static void main(String[] args) {
-		int nums[] = { 1, 2, 4, 5 };
+		int nums[] = { 1, 2, 4, 5,1};
 		boolean res = ContainsDuplicate.checkDuplicate(nums);
 		System.out.println("Contains duplicate: "+res);
 
