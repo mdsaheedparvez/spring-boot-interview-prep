@@ -39,7 +39,7 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 public class MaximumSubArray {
 
 	public static void main(String[] args) {
-		int [] nums = {-1,-2,-3,-4,-6};
+		int [] nums = {-1,-2,3,4,-6};
         int maxSubArray = MaximumSubArray.maxSubArray(nums);
         System.out.println(maxSubArray);
 	}
