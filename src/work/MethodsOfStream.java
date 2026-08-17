@@ -1,5 +1,6 @@
 package work;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -34,7 +35,8 @@ public class MethodsOfStream {
 		collect2.stream().sorted().forEach(System.out::println);
 		
 		//max && min
-		Integer integer = listNum.stream().max((x,y)->x.compareTo(y)).get();
+//		Integer integer = listNum.stream().max((x,y)->x.compareTo(y)).get();
+		Integer integer = listNum.stream().max(Comparator.naturalOrder()).get();
 		System.out.println(integer);
 		
 		Integer integer2 = listNum.stream().min((x,y)->x.compareTo(y)).get();
