@@ -2,6 +2,16 @@ package leetCode.ArraysRelatedLeetcode;
 
 /*
  * 53. Maximum Subarray
+ * 
+ * 
+ * Kadane's Algorithm
+
+Kadane's Algorithm is used to find the maximum sum of a contiguous subarray.
+
+Example
+arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+
+
 Solved
 Medium
 Topics
